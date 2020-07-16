@@ -1,4 +1,4 @@
-let darkModeButton = document.querySelector(".darkModeButton");
+let darkModeButton = document.querySelector(".header__darkModeButton");
 
 let container = document.querySelector(".container");
 
@@ -9,12 +9,12 @@ let articleHeader1 = document.querySelector(".articleHeader1");
 let articleHeader2 = document.querySelector(".articleHeader2"); 
 let articleHeader3 = document.querySelector(".articleHeader3"); 
 
-let minorText = document.querySelector(".minorText");
+let minorText = document.querySelector(".header__minorText");
 
-let navLink1 = document.querySelector(".navLink1");
-let navLink2 = document.querySelector(".navLink2");
-let navLink3 = document.querySelector(".navLink3");
-let navLink4 = document.querySelector(".navLink4");
+let navLink1 = document.querySelector(".header__navLink1");
+let navLink2 = document.querySelector(".header__navLink2");
+let navLink3 = document.querySelector(".header__navLink3");
+let navLink4 = document.querySelector(".header__navLink4");
 
 let introduction = document.querySelector(".introduction");
 let introductionText1 = document.querySelector(".introductionText1");
@@ -64,7 +64,7 @@ let footerMinorText = document.querySelector(".footerMinorText");
 
 // Dark Mode 
 
-darkModeButton.addEventListener("click", () => {
+let onChangeModeClick = () => {
 
     if(darkModeButton.innerText === "Dark Mode") {
         darkModeButton.innerText = "Light Mode";
@@ -137,4 +137,6 @@ darkModeButton.addEventListener("click", () => {
 
     footerMinorText.classList.toggle("footerMinorTextDark");
 
-});
+};
+
+darkModeButton.addEventListener("click", onChangeModeClick);
